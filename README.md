@@ -33,17 +33,17 @@ Output: output/monthly.pdf (your report) or output/example.pdf (demo)
 
 working-hours-report/
 ├── templates/
-│   ├── monthly-template.typ      # German production template
-│   ├── monthly-template-en.typ   # English example template
-│   └── monthly-report.typ        # Generated (do not edit)
+│   ├── monthly-template.typ   
+│   ├── monthly-template-en.typ
+│   └── monthly-report.typ    
 ├── example/
-│   ├── variables.py              # Example configuration
-│   └── 01.2026.csv               # Sample working hours data
+│   ├── variables.py        
+│   └── 01.2026.csv         
 ├── lib/
-│   └── working-hours.typ         # Table generation library
-├── assets/                       # Logos and images
-├── data/                         # Your CSV data (symlinks)
-└── output/                       # Generated PDFs
+│   └── working-hours.typ  
+├── assets/               
+├── data/                
+└── output/                     
 
 ## Configuration
 
