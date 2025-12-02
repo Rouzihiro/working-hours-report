@@ -30,7 +30,7 @@ make clean
 Output: output/monthly.pdf (your report) or output/example.pdf (demo)
 
 ## Project Structure
-
+```
 working-hours-report/
 ├── templates/
 │   ├── monthly-template.typ
@@ -44,13 +44,13 @@ working-hours-report/
 ├── assets/
 ├── data/
 └── output/                     
-
+```
 ## Configuration
 
 ### 1. Set Your Variables
 Edit variables.py:
 VARIABLES = {
-    "DEPARTEMENT": "Unfallchirurgie, Orthopädie und Sporttraumatologie",
+    "DEPARTEMENT": "departement",
     "EMPLOYE_NAME": "Your Name",
     "CITY": "Your City",
     "DATE": "31.12.2025"
@@ -63,7 +63,6 @@ ln -s /path/to/your/data.csv data/12.2025.csv
 
 CSV Format:
 Datum,Wochentag,Arbeitszeit,Arbeitsstunden,Bemerkungen
-01.12.2025,Montag,,1h,mobiles Arbeiten
 02.12.2025,Dienstag,10:00 - 13:30,3.5h,
 ...
 
