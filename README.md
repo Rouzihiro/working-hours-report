@@ -65,9 +65,7 @@ VARIABLES = {
 ```
 
 ### 2. Add Your Data
-Place CSV files and create symlinks:
-Example: Link your December 2025 data
-ln -s /path/to/your/data.csv data/12.2025.csv
+Place CSV files into /data folder
 
 CSV Format:
 Datum,Wochentag,Arbeitszeit,Arbeitsstunden,Bemerkungen
@@ -100,21 +98,6 @@ typst compile templates/monthly-report.typ output/custom.pdf
 ### Example Data
 Test with included example data:
 make test  # Uses example/variables.py and example/01.2026.csv
-
-## Requirements
-
-- Typst (PDF generation)
-- Python 3.6+ (variable substitution)
-
-### Install Typst
-macOS/Linux
-curl --proto '=https' --tlsv1.2 -sSfL https://raw.githubusercontent.com/typst/typst/main/install.sh | sh
-
-Windows (Winget)
-winget install --id Typst.Typst
-
-Windows (Scoop)
-scoop install typst
 
 ## CSV Format Reference
 ```
@@ -160,6 +143,53 @@ Edit lib/working-hours.typ for:
 - Border styles
 - Alternating row colors
 - Checkbox appearance
+
+## Requirements
+- Typst (PDF generation)
+- Python 3.6+ (variable substitution)
+
+### Install Typst
+```
+#!/bin/bash
+
+# Typst & Tinymist Installation Script
+echo "========================================="
+echo "Installing Typst & Tinymist for Neovim"
+echo "========================================="
+
+# Update system and install dependencies
+echo "📦 Installing system dependencies..."
+sudo dnf install -y openssl-devel gcc make pkgconfig cargo
+
+# Install Typst CLI
+echo "🚀 Installing Typst CLI..."
+cargo install typst-cli --locked
+
+# Install Tinymist CLI (LSP server)
+echo "💡 Installing Tinymist CLI (LSP server)..."
+cargo install --git https://github.com/Myriad-Dreamin/tinymist --locked tinymist-cli
+
+# Verify installations
+echo "✅ Verifying installations..."
+echo ""
+echo "Typst version:"
+typst --version || echo "Typst not found in PATH"
+echo ""
+echo "Tinymist version:"
+tinymist --version || echo "Tinymist not found in PATH"
+
+echo ""
+echo "========================================="
+echo "Installation Complete!"
+echo ""
+echo "Next steps in Neovim:"
+echo "1. Open Neovim"
+echo "2. Run: :MasonInstall tinymist"
+echo ""
+echo "Why Mason too? Mason ensures the LSP is in the"
+echo "right location for Neovim's package manager."
+echo "========================================="
+```
 
 ## Contributing
 
