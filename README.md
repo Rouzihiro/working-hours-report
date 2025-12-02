@@ -49,12 +49,14 @@ working-hours-report/
 
 ### 1. Set Your Variables
 Edit variables.py:
+```
 VARIABLES = {
     "DEPARTEMENT": "departement",
     "EMPLOYE_NAME": "Your Name",
     "CITY": "Your City",
     "DATE": "31.12.2025"
 }
+```
 
 ### 2. Add Your Data
 Place CSV files and create symlinks:
@@ -109,7 +111,7 @@ Windows (Scoop)
 scoop install typst
 
 ## CSV Format Reference
-
+```
 Column: Datum
 Required: Yes
 Example: 01.12.2025
@@ -134,14 +136,15 @@ Column: Bemerkungen
 Required: No
 Example: mobiles Arbeiten
 Description: Notes/comments
-
+```
 ## Customization
 
 ### Change Colors
+```
 In templates/monthly-template.typ:
 #set text(fill: rgb("#2d3748"))  // Text color
 #block(fill: luma(245))          // Background color
-
+```
 ### Change Font
 #set text(font: "Inter", weight: 400)
 
@@ -170,10 +173,12 @@ MIT License - see LICENSE for details.
 - Inspired by German medical documentation standards
 - Designed for clarity and professional presentation
 
+```
 Quick Reference:
 make help      # Show all commands
 make test      # Generate example report
-make monthly   # Generate your report
+make month     # Generate your report
 make clean     # Remove generated files
+```
 
 Star this repo if you find it useful!
