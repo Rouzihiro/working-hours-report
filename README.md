@@ -12,6 +12,12 @@ A professional, self-contained Typst template system for automated working hours
 - **Flexible Templates** - Easily customizable colors, fonts, layouts
 - **Multi-Language Support** - German & English templates included
 
+## 📄 Report Preview
+
+![Monthly Report Example](assets/preview.png)
+
+*Example of the generated monthly report*
+
 ## Quick Start
 
 Clone the repository:
