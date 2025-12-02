@@ -33,16 +33,16 @@ Output: output/monthly.pdf (your report) or output/example.pdf (demo)
 
 working-hours-report/
 ├── templates/
-│   ├── monthly-template.typ   
+│   ├── monthly-template.typ
 │   ├── monthly-template-en.typ
-│   └── monthly-report.typ    
+│   └── monthly-report.typ
 ├── example/
-│   ├── variables.py        
-│   └── 01.2026.csv         
+│   ├── variables.py
+│   └── 01.2026.csv
 ├── lib/
-│   └── working-hours.typ  
-├── assets/               
-├── data/                
+│   └── working-hours.typ
+├── assets/
+├── data/
 └── output/                     
 
 ## Configuration
@@ -53,7 +53,7 @@ VARIABLES = {
     "DEPARTEMENT": "Unfallchirurgie, Orthopädie und Sporttraumatologie",
     "EMPLOYE_NAME": "Your Name",
     "CITY": "Your City",
-    "DATE": "31.12.2025"  # Report date
+    "DATE": "31.12.2025"
 }
 
 ### 2. Add Your Data
@@ -144,7 +144,7 @@ In templates/monthly-template.typ:
 #block(fill: luma(245))          // Background color
 
 ### Change Font
-#set text(font: "Inter", weight: 400)  // Modern font
+#set text(font: "Inter", weight: 400)
 
 ### Modify Table Layout
 Edit lib/working-hours.typ for:
