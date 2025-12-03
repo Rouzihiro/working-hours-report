@@ -53,3 +53,4 @@ Thumbs.db
 # Output directories
 output/
 data/
+!data/01.2026.csv
