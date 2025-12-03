@@ -54,3 +54,4 @@ Thumbs.db
 output/
 data/*
 !data/01.2026.csv
+!examples/example.pdf
